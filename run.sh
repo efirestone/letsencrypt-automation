@@ -6,11 +6,6 @@ DN=example.com
 DNS1=apps.example.com
 DNS2=managed.example.com
 
-OPTIONS=" --debug --http-01-port 80 --renew-by-default  --agree-tos --standalone --standalone-supported-challenges http-01"
-
-/bin/bash /opt/letsencrypt/letsencrypt-auto certonly  -d $CN -d $DN -d $DNS1 -d $DNS2 $OPTIONS
-
-
 # Webmin server, linked to DNS2
 WEBMINSVR1=192.168.2.254
 

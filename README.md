@@ -3,19 +3,12 @@
 
 This project was created to help support automating lets encrypt certificate automation.
 
-The run.sh script runs the renewal process over http and as a standalone service. 
-Any port 80 traffic set on any IP (resolving external DNS) can find it way back
-for the challenge and validate the certificate generation.
-
 
 -----------
 This script supports
 
 
 Apache/Nginx
-
-
-Haproxy
 
 
 Webmin
