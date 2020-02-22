@@ -7,10 +7,6 @@ This project was created to help support automating lets encrypt certificate aut
 -----------
 This script supports
 
-
-Apache/Nginx
-
-
 PFSense
 
 

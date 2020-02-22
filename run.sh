@@ -6,18 +6,6 @@ DN=example.com
 DNS1=apps.example.com
 DNS2=managed.example.com
 
-#openssl dhparam -out /etc/letsencrypt/live/$CN/dh.pem 2048
-cat /etc/letsencrypt/live/$CN/fullchain.pem /etc/letsencrypt/live/$CN/privkey.pem /etc/letsencrypt/live/$CN/dh.pem > /etc/letsencrypt/live/$CN/$CN.pem
-
-# Apache2 server, linked to CN
-APACHESVR1=192.168.2.232
-
-#openssl dhparam -out /etc/letsencrypt/live/$CN/dh.pem 2048
-cat /etc/letsencrypt/live/$CN/fullchain.pem /etc/letsencrypt/live/$CN/dh.pem > /etc/letsencrypt/live/$CN/$CN-chain.pem
-scp /etc/letsencrypt/live/$CN/$CN-chain.pem APACHESVR1:/etc/ssl/common/$CN.crt
-scp /etc/letsencrypt/live/$CN/privkey.pem APACHESVR1:/etc/ssl/common/$CN.key
-ssh APACHESVR1 'service apache2 restart'
-
 # PFSense server, linked to CN
 # pfsense server name or IP
 PFSENSESVR1=192.168.2.4
