@@ -3,7 +3,7 @@
 # This would be the name you used to upload the first time.
 # hence it must exist prior to automating with these scripts
 
-/.*LetsEncrypt.*/{
+/.*NAMEPLACEHOLDER.*/{
 		N
 		/<crt>.*<\/crt>/{
 		s//<crt>CRTPLACEHOLDER<\/crt>/
