@@ -11,9 +11,6 @@ This script supports
 Apache/Nginx
 
 
-Webmin
-
-
 PFSense
 
 

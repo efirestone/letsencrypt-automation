@@ -6,15 +6,6 @@ DN=example.com
 DNS1=apps.example.com
 DNS2=managed.example.com
 
-# Webmin server, linked to DNS2
-WEBMINSVR1=192.168.2.254
-
-scp /etc/letsencrypt/live/$DNS2/cert.pem WEBMINSVR1:/etc/webmin/miniserv.cert
-scp /etc/letsencrypt/live/$DNS2/chain.pem WEBMINSVR1:/etc/webmin/miniserv.chain
-scp /etc/letsencrypt/live/$DNS2/privkey.pem WEBMINSVR1:/etc/webmin/miniserv.pem
-ssh WEBMINSVR1 'service webmin restart'
-
-
 #openssl dhparam -out /etc/letsencrypt/live/$CN/dh.pem 2048
 cat /etc/letsencrypt/live/$CN/fullchain.pem /etc/letsencrypt/live/$CN/privkey.pem /etc/letsencrypt/live/$CN/dh.pem > /etc/letsencrypt/live/$CN/$CN.pem
 
